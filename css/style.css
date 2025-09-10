@@ -1,0 +1,41 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+.navbar { box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+.hero-section {
+    background: url('https://source.unsplash.com/random/1600x900/?digital,network') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 120px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.card, .testimonial-card {
+    border: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,.1);
+}
+.feature-icon { font-size: 3rem; color: #0d6efd; }
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.cta-section {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.from-left { transform: translateX(-150px); }
+.from-right { transform: translateX(150px); }
+.from-bottom { transform: translateY(100px); }
+
+.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
