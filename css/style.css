@@ -1,41 +1,46 @@
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #f8f9fa;
-    overflow-x: hidden;
-}
-.navbar { box-shadow: 0 2px 4px rgba(0,0,0,.1); }
-.hero-section {
-    background: url('https://source.unsplash.com/random/1600x900/?digital,network') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 120px 0;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-.card, .testimonial-card {
-    border: none;
-    box-shadow: 0 8px 16px rgba(0,0,0,.1);
-}
-.feature-icon { font-size: 3rem; color: #0d6efd; }
-.testimonial-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-}
-.cta-section {
-    background-color: #343a40;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Press Start 2P', cursive;
+    color: #535353;
 }
 
-/* Scroll Animation */
-.animate-on-scroll {
-    opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+#game-container {
+    position: relative;
+    border: 2px solid #535353;
 }
-.from-left { transform: translateX(-150px); }
-.from-right { transform: translateX(150px); }
-.from-bottom { transform: translateY(100px); }
 
-.is-visible {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
+#canvas-container {
+    width: 600px;
+    height: 300px;
+}
+
+#ui-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+#score, #highscore, #lives {
+    font-size: 14px;
+}
+
+#game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #535353;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
