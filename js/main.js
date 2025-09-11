@@ -59,8 +59,8 @@ window.draw = function() {
         obstacles[i].show();
 
         if (dino.hits(obstacles[i]) && !dino.invincible) {
-            obstacles.splice(i, 1);
-            handleHit();
+            handleHit(); // Call handleHit first
+            obstacles.splice(i, 1); // Then remove the obstacle
         }
 
         if (obstacles[i].x < -obstacles[i].w) {
